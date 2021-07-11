@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>LOGIN FORM</title>
+<script>
+function submit()
+{
+var fn=document.forms["regform"]["firstname"].value;
+var ln=document.forms["regform"["lastname"].value;
+var gn=document.forms"regform"]["gender"];
+var ctry=document.forms["regform"]["country"];
+if(fn==null||fn=="")
+{
+alert("First name cannot be empty");
+return false;
+}
+else if(ln==null||ln=="")
+{
+alert("Enter your last name");
+return false;
+}
+else if((gn[0].checked==false)&&(gn[1].checked==false))
+{
+alert("click the gender button and don't press both");
+return false;
+}
+else if(ctry.selectedIndex==0)
+{
+alert("enter your country otherwise you are alien");
+return false;
+}
+}
+</script>
+<style>
+div
+{
+margin:0px auto;
+width:35%;
+padding:30px;
+font-size:20px;
+background-color:purple;
+}
+input[type=text],select{
+width:100%;
+padding:12px 20px;
+margin:8px 0;
+display:inline-block;
+border:1px solid #ccc;
+box-sizing:border-box;
+font-size:14px;
+}
+input[type=submit]
+{
+width:100%;
+background-color:#003399;
+color:whote;
+padding:14px 20px;
+margin:8px 0;
+border:none;
+border-radius:4px;
+cursor:pointer;
+font-size:16px;
+}
+input[type=submit]:hover
+{
+background-color: #2F4F4F;
+}
+</style>
+</head>
+<body>
+<h1 align=center>REGISTER FORM</h1>
+<div>
+<form name="regform" method="post" sunmit="submit()">
+<label for="fname">FIRST NAME</label>
+<input type="text" id="fname" name="firstname" placeholder="enter first name">
+<label for="lname">LAST NAME</label>
+<input type="text" id="lname" name="lastname" placeholder="enter lastname name">
+<label>GENDER</label><br/>
+<input type="radio" id="male" value="male">
+<label for="male">MALE</label><br/>
+<input type="radio" id="female" value="female">
+<label for="female">FEMALE</label><br/>
+<label for="country">COUNTRY</label>
+<select id="country" name="country">
+<option value="America">America</option>
+<option value="India">India</option>
+<option value="Japan">Japan</option>
+<option value="China">China</option><
+<option value="Australia">Australia</option>
+<br><input type="submit" value="submit"><br/>
+</form>
+</div>
+</body>
+</html>
